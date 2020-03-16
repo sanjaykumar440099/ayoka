@@ -1,0 +1,90 @@
+<ion-header [translucent]="true">
+    <ion-toolbar class="top-header">
+        <button ion-button menuToggle (click)="openFirst()" class="toggle-button">
+        <ion-icon name="menu" class="menu-icon"></ion-icon>
+        </button>
+        <ion-img src="assets/img/logo-ico.png" class="logo-icon"></ion-img>
+
+
+        <ion-item lines="none">
+            <ion-icon name="cart"></ion-icon>
+        </ion-item>
+
+        <ion-item lines="none">
+            <ion-icon name="notifications"></ion-icon>
+        </ion-item>
+
+        <ion-item lines="none">
+            <ion-icon name="search"></ion-icon>
+        </ion-item>
+    </ion-toolbar>
+</ion-header>
+
+<ion-menu side="start" menuId="first" contentId="menuContent">
+    <ion-header>
+        <ion-toolbar color="default">
+            <ion-title>
+                <ion-img src="assets/img/logo.png"></ion-img>
+            </ion-title>
+        </ion-toolbar>
+    </ion-header>
+    <ion-content>
+        <ion-list>
+            <ion-item routerLink="/home" routerDirection="root" (click)="goToPages('home')">
+                <ion-icon name="home" class="menu-icon-list"></ion-icon> Home
+            </ion-item>
+
+            <ion-item>
+                <ion-icon name="desktop" class="menu-icon-list"></ion-icon> Desktops
+            </ion-item>
+
+            <ion-item>
+                <ion-icon name="laptop" class="menu-icon-list"></ion-icon> Laptops
+            </ion-item>
+
+            <ion-item>
+                <ion-icon name="albums" class="menu-icon-list"></ion-icon> Components
+            </ion-item>
+
+            <ion-item>
+                <ion-icon name="tablet-portrait" class="menu-icon-list"></ion-icon> Tablets
+            </ion-item>
+
+            <ion-item>
+                <ion-icon name="cube" class="menu-icon-list"></ion-icon> Software
+            </ion-item>
+            <ion-item>
+                <ion-icon name="camera" class="menu-icon-list"></ion-icon> Camera
+            </ion-item>
+
+            <ion-item>
+                <ion-icon name="podium" class="menu-icon-list"></ion-icon> MP3 Players
+            </ion-item>
+
+            <ion-item (click)="menuItemHandlerFirst()">
+                <ion-icon name="key" class="menu-icon-list"></ion-icon> My Account
+                <ion-icon name="{{ navIcon }}" class="creet-icon"></ion-icon>
+            </ion-item>
+            <ion-item submenu-item *ngIf="showSubmenu">
+                <ion-icon name="person-add" class="menu-icon-list"></ion-icon> Register
+            </ion-item>
+            <ion-item submenu-item *ngIf="showSubmenu">
+                <ion-icon name="log-in" class="menu-icon-list"></ion-icon> Login
+            </ion-item>
+            <ion-item submenu-item *ngIf="showSubmenu">
+                <ion-icon name="heart" class="menu-icon-list"></ion-icon> Wish List
+            </ion-item>
+
+            <ion-item (click)="menuItemHandlerSecond()">
+                <ion-icon name="cash" class="menu-icon-list"></ion-icon> My Store
+                <ion-icon name="{{ navIcons }}" class="creet-icon"></ion-icon>
+            </ion-item>
+            <ion-item submenu-item *ngIf="showSubmenuItem" (click)="goToPages('createStore')">
+                <ion-icon name="add-circle" class="menu-icon-list"></ion-icon> Create Store
+            </ion-item>
+            <ion-item submenu-item *ngIf="showSubmenuItem">
+                <ion-icon name="log-in" class="menu-icon-list"></ion-icon> Login
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-menu>

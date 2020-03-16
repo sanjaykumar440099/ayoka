@@ -1,0 +1,56 @@
+<ion-content overflow-scroll="true" class="has-header">
+    <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content pullingIcon="arrow-dropdown" pullingText="Pull to refresh" refreshingSpinner="circles">
+        </ion-refresher-content>
+    </ion-refresher>
+
+    <div class="container-frame">
+        <!-- slider -->
+        <ion-slides [options]="sliderOpts" #slider>
+            <ion-slide>
+                <div class="slide">
+                    <img src="assets/img/slide-1.png" />
+                </div>
+            </ion-slide>
+
+            <ion-slide>
+                <img src="assets/img/slide-2.png" />
+            </ion-slide>
+        </ion-slides>
+
+        <!--secon row-->
+        <ion-grid>
+            <ion-row>
+                <ion-col size="6">
+                    <img src="assets/img/right-1.jpg" />
+                </ion-col>
+                <ion-col size="6">
+                    <img src="assets/img/right-2.jpg" />
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+
+        <!--discounts-->
+        <div class="discounts">
+            <ion-grid>
+                <ion-row>
+                    <ion-col size="12">
+                        <ion-card-title>Discounts for You</ion-card-title>
+                        <ion-slides [options]="sliderOptsDiscounts" #slider>
+                            <ion-slide>
+                                <div class="slide">
+                                    <img src="assets/img/d-1.png" />
+                                </div>
+                            </ion-slide>
+
+                            <ion-slide>
+                                <img src="assets/img/d-2.png" />
+                            </ion-slide>
+                        </ion-slides>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </div>
+
+    </div>
+</ion-content>

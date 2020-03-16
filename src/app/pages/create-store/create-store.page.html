@@ -1,0 +1,70 @@
+<ion-content overflow-scroll="true" class="has-header">
+    <div class="container-frame form-container">
+        <ion-list lines="bottom">
+            <form [formGroup]="createStoreForm" class="creating-form">
+                <ion-title class="ion-header">Create Your Store</ion-title>
+                <!--first step-->
+                <div class="first-step" *ngIf="firstStep">
+                    <ion-row>
+                        <ion-col>
+                            <ion-item>
+                                <ion-label position="floating">First Name</ion-label>
+                                <ion-input formControlName="firstName" type="text"></ion-input>
+                            </ion-item>
+
+                            <ion-item>
+                                <ion-label position="floating">Last Name</ion-label>
+                                <ion-input formControlName="lastName" type="text"></ion-input>
+                            </ion-item>
+                        </ion-col>
+                    </ion-row>
+
+                    <ion-row>
+                        <ion-col>
+                            <div padding class="button-next">
+                                <ion-button size="medium" type="submit" expand="block" (click)="goToNextStep('second')">
+                                    Next
+                                </ion-button>
+                            </div>
+                        </ion-col>
+                    </ion-row>
+                </div>
+
+                <!--second step-->
+                <div class="second-step" *ngIf="seconStep">
+                    <ion-row>
+                        <ion-col>
+                            <ion-item>
+                                <ion-label position="floating">Email</ion-label>
+                                <ion-input formControlName="email" type="text" required></ion-input>
+                            </ion-item>
+
+                            <ion-item>
+                                <ion-label position="floating">Mobile Number</ion-label>
+                                <ion-input formControlName="mobile" type="text"></ion-input>
+                            </ion-item>
+                        </ion-col>
+                    </ion-row>
+
+                    <ion-row>
+                        <ion-col>
+                            <div padding class="button-next">
+                                <ion-button size="medium" type="submit" expand="block" (click)="goToNextStep('first')">
+                                    Back
+                                </ion-button>
+                            </div>
+                        </ion-col>
+
+                        <ion-col>
+                            <div padding class="button-next">
+                                <ion-button size="medium" type="submit" expand="block" (click)="goToNextStep('third')">
+                                    Next
+                                </ion-button>
+                            </div>
+                        </ion-col>
+                    </ion-row>
+                </div>
+            </form>
+        </ion-list>
+    </div>
+</ion-content>
