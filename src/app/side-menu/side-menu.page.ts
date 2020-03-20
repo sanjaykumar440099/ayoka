@@ -63,7 +63,8 @@ export class SideMenuPage implements OnInit {
       this.navIcons = 'chevron-forward';
       this.showSubmenuItem = false;
       this.router.navigateByUrl('/create-store');
+    } else if (url === 'searchStore') {
+      this.router.navigateByUrl('/search-store');
     }
   }
-
 }

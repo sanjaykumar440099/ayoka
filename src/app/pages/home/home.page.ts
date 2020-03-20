@@ -26,15 +26,7 @@ export class HomePage implements OnInit {
 
   subscribe: any;
 
-  constructor(private platform: Platform) {
-    this.subscribe = this.platform.backButton.subscribeWithPriority(666666, () => {
-      if (this.constructor.name === 'HomePage') {
-        if (window.confirm("Do you want to exit the app ?")) {
-          navigator['app'].exitApp();
-        }
-      }
-    })
-  }
+  constructor(private platform: Platform) { }
 
   ngOnInit() { }
 

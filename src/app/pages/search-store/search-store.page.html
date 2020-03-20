@@ -1,0 +1,23 @@
+<ion-content overflow-scroll="true" class="has-header">
+    <div class="container-frame">
+        <ion-grid>
+            <ion-row>
+                <ion-col size="12">
+                    <!-- Searchbar with cancel button shown on focus -->
+                    <ion-searchbar cancelButtonText="Custom Cancel" [(ngModel)]="queryText" placeholder="Search by store" (ngModelChange)="searchByKeyword(queryText)"></ion-searchbar>
+                    <ion-list>
+                        <ion-item *ngFor="let item of filterData">
+                            <ion-label>{{ item.name }}</ion-label>
+                        </ion-item>
+                    </ion-list>
+
+                    <ion-list>
+                        <ion-item *ngIf="noDataText">
+                            <ion-label><b>No results found...</b></ion-label>
+                        </ion-item>
+                    </ion-list>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </div>
+</ion-content>

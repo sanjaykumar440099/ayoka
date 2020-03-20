@@ -1,3 +1,5 @@
 export const environment = {
-  production: true
+  production: true,
+  baseUrl: "https://ayoka.in",
+  apiUrl: "/api/v1"
 };
