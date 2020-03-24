@@ -9,12 +9,12 @@
                         <ion-col>
                             <ion-item>
                                 <ion-label position="floating">First Name</ion-label>
-                                <ion-input formControlName="firstName" type="text"></ion-input>
+                                <ion-input formControlName="firstname" type="text"></ion-input>
                             </ion-item>
 
                             <ion-item>
                                 <ion-label position="floating">Last Name</ion-label>
-                                <ion-input formControlName="lastName" type="text"></ion-input>
+                                <ion-input formControlName="lastname" type="text"></ion-input>
                             </ion-item>
 
                             <ion-item>
@@ -24,7 +24,7 @@
 
                             <ion-item>
                                 <ion-label position="floating">Mobile Number</ion-label>
-                                <ion-input formControlName="mobile" type="text"></ion-input>
+                                <ion-input formControlName="telephone" type="text"></ion-input>
                             </ion-item>
                         </ion-col>
                     </ion-row>
@@ -46,7 +46,7 @@
                         <ion-col>
                             <ion-item>
                                 <ion-label position="floating">Store Name</ion-label>
-                                <ion-input formControlName="storeName" type="text" (change)="checkStoreAvailability()"></ion-input>
+                                <ion-input formControlName="username" type="text" (change)="checkStoreAvailability()"></ion-input>
                             </ion-item>
 
                             <ion-item>
@@ -56,7 +56,7 @@
 
                             <ion-item>
                                 <ion-label>Select Plan</ion-label>
-                                <ion-select formControlName="planName">
+                                <ion-select>
                                     <ion-select-option value="Gold ( $0.00 )">Gold ( $0.00 )</ion-select-option>
                                     <ion-select-option value="Silver($0.00)">Silver($0.00)</ion-select-option>
                                     <ion-select-option value="Bronze($0.00)">Bronze($0.00)</ion-select-option>

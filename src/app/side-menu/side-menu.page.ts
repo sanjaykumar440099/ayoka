@@ -58,13 +58,15 @@ export class SideMenuPage implements OnInit {
   goToPages(url: string) {
     this.menu.close();
     if (url === 'home') {
-      return this.router.navigateByUrl('/home');
+      return this.router.navigateByUrl('/home'); 
     } else if (url === 'createStore') {
       this.navIcons = 'chevron-forward';
       this.showSubmenuItem = false;
       this.router.navigateByUrl('/create-store');
     } else if (url === 'searchStore') {
       this.router.navigateByUrl('/search-store');
+    } else if (url === 'loginStore') {
+      this.router.navigateByUrl('/store-login');
     }
   }
 }

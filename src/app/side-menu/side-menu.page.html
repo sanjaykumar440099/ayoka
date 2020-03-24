@@ -82,7 +82,7 @@
             <ion-item submenu-item *ngIf="showSubmenuItem" (click)="goToPages('createStore')">
                 <ion-icon name="add-circle" class="menu-icon-list"></ion-icon> Create Store
             </ion-item>
-            <ion-item submenu-item *ngIf="showSubmenuItem">
+            <ion-item submenu-item *ngIf="showSubmenuItem" (click)="goToPages('loginStore')">
                 <ion-icon name="log-in" class="menu-icon-list"></ion-icon> Login
             </ion-item>
         </ion-list>
